@@ -2,11 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import { Configuration, OpenAIApi } from 'openai';
 
-import { config } from './config.js';
-const OPENAI_API_KEY = config.OPENAI_API_KEY;
+// import { config } from './config.js';
+// const OPENAI_API_KEY = config.OPENAI_API_KEY;
 
 const configuration = new Configuration({
-  apiKey: OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY
 });
 
 const openai = new OpenAIApi(configuration);
